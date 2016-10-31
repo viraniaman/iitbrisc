@@ -1,0 +1,942 @@
+Analysis & Synthesis report for microprocessor
+Mon Oct 31 15:52:10 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |microprocessor|uP:control_path|Q
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for datapath:data_path|memory:RAM|altsyncram:altsyncram_component|altsyncram_n9p3:auto_generated
+ 14. Parameter Settings for User Entity Instance: datapath:data_path|general_register:T1
+ 15. Parameter Settings for User Entity Instance: datapath:data_path|general_register:T2
+ 16. Parameter Settings for User Entity Instance: datapath:data_path|general_register:T3
+ 17. Parameter Settings for User Entity Instance: datapath:data_path|general_register:T4
+ 18. Parameter Settings for User Entity Instance: datapath:data_path|general_register:T5
+ 19. Parameter Settings for User Entity Instance: datapath:data_path|mux4:MUX_1
+ 20. Parameter Settings for User Entity Instance: datapath:data_path|mux4:MUX_2
+ 21. Parameter Settings for User Entity Instance: datapath:data_path|mux8:MUX_3
+ 22. Parameter Settings for User Entity Instance: datapath:data_path|mux4:MUX_4
+ 23. Parameter Settings for User Entity Instance: datapath:data_path|mux4:MUX_5
+ 24. Parameter Settings for User Entity Instance: datapath:data_path|mux2:MUX_6
+ 25. Parameter Settings for User Entity Instance: datapath:data_path|mux2:MUX_7
+ 26. Parameter Settings for User Entity Instance: datapath:data_path|mux2:MUX_8
+ 27. Parameter Settings for User Entity Instance: datapath:data_path|sign_extender:SE9
+ 28. Parameter Settings for User Entity Instance: datapath:data_path|sign_extender:SE6
+ 29. Parameter Settings for User Entity Instance: datapath:data_path|general_register:Ins_reg
+ 30. Parameter Settings for User Entity Instance: datapath:data_path|general_register:PC
+ 31. Parameter Settings for User Entity Instance: datapath:data_path|general_register:MDR
+ 32. Parameter Settings for User Entity Instance: datapath:data_path|memory:RAM|altsyncram:altsyncram_component
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Port Connectivity Checks: "datapath:data_path|mux4:MUX_5"
+ 35. Port Connectivity Checks: "datapath:data_path|mux4:MUX_4"
+ 36. Port Connectivity Checks: "datapath:data_path|mux8:MUX_3"
+ 37. Port Connectivity Checks: "datapath:data_path|mux4:MUX_2"
+ 38. Port Connectivity Checks: "datapath:data_path|mux4:MUX_1"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Oct 31 15:52:10 2016       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                      ; microprocessor                              ;
+; Top-level Entity Name              ; microprocessor                              ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 2                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                                      ; microprocessor     ; microprocessor     ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; types.vhd                        ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/types.vhd                                            ;         ;
+; datapath.vhd                     ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/datapath.vhd                                         ;         ;
+; mux4.vhd                         ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/mux4.vhd                                             ;         ;
+; sign_extender.vhd                ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/sign_extender.vhd                                    ;         ;
+; mux8.vhd                         ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/mux8.vhd                                             ;         ;
+; priority_encoder.vhd             ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/priority_encoder.vhd                                 ;         ;
+; microprocessor.vhd               ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/microprocessor.vhd                                   ;         ;
+; general_register.vhd             ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/general_register.vhd                                 ;         ;
+; mux2.vhd                         ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/mux2.vhd                                             ;         ;
+; alu.vhd                          ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/alu.vhd                                              ;         ;
+; register_file.vhd                ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/register_file.vhd                                    ;         ;
+; memory.vhd                       ; yes             ; User Wizard-Generated File   ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/memory.vhd                                           ;         ;
+; uP.vhd                           ; yes             ; User VHDL File               ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/uP.vhd                                               ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_n9p3.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/aman/Documents/sem5/EE 309                                                  ;         ;
+;                                  ;                 ;                              ; Processors/project1/iitbrisc/db/altsyncram_n9p3.tdf                               ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+; |microprocessor            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |microprocessor     ; microprocessor ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |microprocessor|uP:control_path|Q                                                                                                                                              ;
++--------+-------+-------+-------+-------+-------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+--------+--------+--------+-------+-------+-------+-------+
+; Name   ; Q.SM3 ; Q.SM2 ; Q.LM3 ; Q.LM2 ; Q.LM1 ; Q.JLR2 ; Q.JAL1 ; Q.BEQ3 ; Q.BEQ2 ; Q.BEQ1 ; Q.SW3 ; Q.LW4 ; Q.LW3 ; Q.LW2 ; Q.LW1 ; Q.OPI2 ; Q.OPI1 ; Q.LHI1 ; Q.OP3 ; Q.OP2 ; Q.OP1 ; Q.PC1 ;
++--------+-------+-------+-------+-------+-------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+--------+--------+--------+-------+-------+-------+-------+
+; Q.PC1  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ;
+; Q.OP1  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 1     ; 1     ;
+; Q.OP2  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 1     ; 0     ; 1     ;
+; Q.OP3  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 1     ; 0     ; 0     ; 1     ;
+; Q.LHI1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 1      ; 0     ; 0     ; 0     ; 1     ;
+; Q.OPI1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 1      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.OPI2 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 1      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.LW1  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 1     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.LW2  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.LW3  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 1     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.LW4  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 1     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.SW3  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 1     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.BEQ1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 1      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.BEQ2 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 1      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.BEQ3 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 1      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.JAL1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 1      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.JLR2 ; 0     ; 0     ; 0     ; 0     ; 0     ; 1      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.LM1  ; 0     ; 0     ; 0     ; 0     ; 1     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.LM2  ; 0     ; 0     ; 0     ; 1     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.LM3  ; 0     ; 0     ; 1     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.SM2  ; 0     ; 1     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
+; Q.SM3  ; 1     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ;
++--------+-------+-------+-------+-------+-------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+--------+--------+--------+-------+-------+-------+-------+
+
+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------------------+----------------------------------------+
+; Register name                                         ; Reason for Removal                     ;
++-------------------------------------------------------+----------------------------------------+
+; datapath:data_path|general_register:T5|Q[0]           ; Stuck at GND due to stuck port data_in ;
+; uP:control_path|IR_write                              ; Merged with uP:control_path|M2[0]      ;
+; uP:control_path|M3[2]                                 ; Merged with uP:control_path|M2[1]      ;
+; uP:control_path|T5_write                              ; Merged with uP:control_path|M2[1]      ;
+; uP:control_path|M7                                    ; Merged with uP:control_path|M6         ;
+; uP:control_path|Q.BEQ2                                ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[12..15] ; Lost fanout                            ;
+; uP:control_path|ALUop[0,1]                            ; Lost fanout                            ;
+; uP:control_path|M4[0,1]                               ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[0]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T2|Q[0]           ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[1]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T2|Q[1]           ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[2]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T2|Q[2]           ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[3]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T2|Q[3]           ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[4]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T2|Q[4,5]         ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[5]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T2|Q[6..15]       ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[0]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[0]           ; Lost fanout                            ;
+; uP:control_path|M3[0,1]                               ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[0]           ; Lost fanout                            ;
+; uP:control_path|M2[1]                                 ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[1]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[1]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[1]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[2]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[2]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[2]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[3]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[3]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[3]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[4]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[4]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[4]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[5]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[5]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[5]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[6]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[6]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[6]           ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[6]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[7]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[7]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[7]           ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[7]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[8]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[8]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[8]           ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[8]      ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[9]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[9]           ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[9]           ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[10]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[10]          ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[10]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[11]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[11]          ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[11]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[12]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[12]          ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[12]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[13]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[13]          ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[13]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[14]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[14]          ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[14]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T1|Q[15]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T4|Q[15]          ; Lost fanout                            ;
+; datapath:data_path|general_register:PC|Q[15]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T5|Q[7]           ; Lost fanout                            ;
+; uP:control_path|M6                                    ; Lost fanout                            ;
+; datapath:data_path|general_register:T5|Q[1..6]        ; Lost fanout                            ;
+; uP:control_path|M2[0]                                 ; Lost fanout                            ;
+; uP:control_path|M5[0,1]                               ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[0]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[0]          ; Lost fanout                            ;
+; uP:control_path|T2_write                              ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[1]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[1]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[2]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[2]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[3]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[3]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[4]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[4]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[5]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[5]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[6]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[6]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[7]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[7]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[8]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[8]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[9]           ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[9]          ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[10]          ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[10]         ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[11]          ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[11]         ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[12]          ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[12]         ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[13]          ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[13]         ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[14]          ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[14]         ; Lost fanout                            ;
+; datapath:data_path|general_register:T3|Q[15]          ; Lost fanout                            ;
+; datapath:data_path|general_register:MDR|Q[15]         ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[9]      ; Lost fanout                            ;
+; uP:control_path|M8                                    ; Lost fanout                            ;
+; datapath:data_path|general_register:Ins_reg|Q[10,11]  ; Lost fanout                            ;
+; uP:control_path|T4_write                              ; Lost fanout                            ;
+; uP:control_path|T1_write                              ; Lost fanout                            ;
+; uP:control_path|M1[0,1]                               ; Lost fanout                            ;
+; uP:control_path|PC_write                              ; Lost fanout                            ;
+; uP:control_path|MEM_write                             ; Lost fanout                            ;
+; uP:control_path|RF_write                              ; Lost fanout                            ;
+; uP:control_path|T3_write                              ; Lost fanout                            ;
+; uP:control_path|MDR_write                             ; Lost fanout                            ;
+; uP:control_path|Q.PC1                                 ; Lost fanout                            ;
+; uP:control_path|Q.OP1                                 ; Lost fanout                            ;
+; uP:control_path|Q.OP2                                 ; Lost fanout                            ;
+; uP:control_path|Q.OP3                                 ; Lost fanout                            ;
+; uP:control_path|Q.LHI1                                ; Lost fanout                            ;
+; uP:control_path|Q.OPI1                                ; Lost fanout                            ;
+; uP:control_path|Q.OPI2                                ; Lost fanout                            ;
+; uP:control_path|Q.LW1                                 ; Lost fanout                            ;
+; uP:control_path|Q.LW2                                 ; Lost fanout                            ;
+; uP:control_path|Q.LW3                                 ; Lost fanout                            ;
+; uP:control_path|Q.LW4                                 ; Lost fanout                            ;
+; uP:control_path|Q.SW3                                 ; Lost fanout                            ;
+; uP:control_path|Q.BEQ1                                ; Lost fanout                            ;
+; uP:control_path|Q.BEQ3                                ; Lost fanout                            ;
+; uP:control_path|Q.JAL1                                ; Lost fanout                            ;
+; uP:control_path|Q.JLR2                                ; Lost fanout                            ;
+; uP:control_path|Q.LM1                                 ; Lost fanout                            ;
+; uP:control_path|Q.LM2                                 ; Lost fanout                            ;
+; uP:control_path|Q.LM3                                 ; Lost fanout                            ;
+; uP:control_path|Q.SM2                                 ; Lost fanout                            ;
+; uP:control_path|Q.SM3                                 ; Lost fanout                            ;
+; Total Number of Removed Registers = 168               ;                                        ;
++-------------------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                   ;
++--------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
+; Register name                                    ; Reason for Removal        ; Registers Removed due to This Register                                         ;
++--------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
+; datapath:data_path|general_register:T5|Q[0]      ; Stuck at GND              ; datapath:data_path|general_register:Ins_reg|Q[12],                             ;
+;                                                  ; due to stuck port data_in ; datapath:data_path|general_register:Ins_reg|Q[13],                             ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[14],                             ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[15],                             ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[0],                              ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[1],                              ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[2],                              ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[3],                              ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[5],                              ;
+;                                                  ;                           ; datapath:data_path|general_register:T4|Q[0],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[0],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:PC|Q[0], uP:control_path|M2[1],            ;
+;                                                  ;                           ; datapath:data_path|general_register:T4|Q[1],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[1],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:PC|Q[1],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[2],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[3],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[5],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[7],                              ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[8],                              ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[12],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[13],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[14],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T1|Q[15],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T5|Q[7], uP:control_path|M6,               ;
+;                                                  ;                           ; datapath:data_path|general_register:T5|Q[4],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T5|Q[3],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T5|Q[2],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T5|Q[1], uP:control_path|M2[0],            ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[0],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[1],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[2],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[3],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[4],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[5],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[6],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[7],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[8],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[9],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[10],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[11],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[12],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[13],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[14],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:T3|Q[15],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[9], uP:control_path|M8,          ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[10],                             ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[11], uP:control_path|T4_write,   ;
+;                                                  ;                           ; uP:control_path|T1_write, uP:control_path|M1[0], uP:control_path|M1[1],        ;
+;                                                  ;                           ; uP:control_path|PC_write, uP:control_path|MEM_write, uP:control_path|T3_write, ;
+;                                                  ;                           ; uP:control_path|Q.OPI1, uP:control_path|Q.SW3, uP:control_path|Q.JLR2,         ;
+;                                                  ;                           ; uP:control_path|Q.LM1, uP:control_path|Q.LM2, uP:control_path|Q.LM3,           ;
+;                                                  ;                           ; uP:control_path|Q.SM2, uP:control_path|Q.SM3                                   ;
+; datapath:data_path|general_register:T2|Q[0]      ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[2],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:Ins_reg|Q[6], uP:control_path|M5[0],       ;
+;                                                  ;                           ; uP:control_path|M5[1], datapath:data_path|general_register:MDR|Q[0],           ;
+;                                                  ;                           ; uP:control_path|T2_write, datapath:data_path|general_register:MDR|Q[1],        ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[2],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[3], uP:control_path|MDR_write,       ;
+;                                                  ;                           ; uP:control_path|Q.OP1, uP:control_path|Q.LW1, uP:control_path|Q.LW3,           ;
+;                                                  ;                           ; uP:control_path|Q.LW4, uP:control_path|Q.JAL1                                  ;
+; datapath:data_path|general_register:T2|Q[11]     ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[11],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[11]                                  ;
+; datapath:data_path|general_register:T4|Q[7]      ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[7],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[7]                                   ;
+; datapath:data_path|general_register:T4|Q[6]      ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[6],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[6]                                   ;
+; datapath:data_path|general_register:T2|Q[15]     ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[15],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[15]                                  ;
+; datapath:data_path|general_register:T2|Q[14]     ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[14],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[14]                                  ;
+; datapath:data_path|general_register:T2|Q[13]     ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[13],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[13]                                  ;
+; datapath:data_path|general_register:T2|Q[12]     ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[12],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[12]                                  ;
+; datapath:data_path|general_register:T2|Q[10]     ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[10],                                  ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[10]                                  ;
+; datapath:data_path|general_register:T2|Q[9]      ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[9],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[9]                                   ;
+; datapath:data_path|general_register:T2|Q[8]      ; Lost Fanouts              ; datapath:data_path|general_register:PC|Q[8],                                   ;
+;                                                  ;                           ; datapath:data_path|general_register:MDR|Q[8]                                   ;
+; uP:control_path|M4[0]                            ; Lost Fanouts              ; uP:control_path|Q.OPI2, uP:control_path|Q.BEQ3                                 ;
+; datapath:data_path|general_register:Ins_reg|Q[4] ; Lost Fanouts              ; datapath:data_path|general_register:T1|Q[4]                                    ;
+; uP:control_path|M4[1]                            ; Lost Fanouts              ; uP:control_path|Q.LW2                                                          ;
+; uP:control_path|M3[0]                            ; Lost Fanouts              ; uP:control_path|Q.PC1                                                          ;
+; uP:control_path|M3[1]                            ; Lost Fanouts              ; uP:control_path|Q.LHI1                                                         ;
+; uP:control_path|ALUop[0]                         ; Lost Fanouts              ; uP:control_path|Q.OP2                                                          ;
+; uP:control_path|RF_write                         ; Lost Fanouts              ; uP:control_path|Q.OP3                                                          ;
++--------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |microprocessor|datapath:data_path|general_register:PC|Q[5] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |microprocessor|datapath:data_path|alu:alu_block|Mux13      ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |microprocessor|datapath:data_path|alu:alu_block|Mux9       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |microprocessor|datapath:data_path|mux4:MUX_2|output[2]     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |microprocessor|datapath:data_path|mux4:MUX_4|output[3]     ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |microprocessor|datapath:data_path|mux4:MUX_4|output[7]     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |microprocessor|datapath:data_path|mux4:MUX_5|output[3]     ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |microprocessor|uP:control_path|nQ                          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |microprocessor|datapath:data_path|a3[0]                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; No         ; |microprocessor|datapath:data_path|mux8:MUX_3|output[1]     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |microprocessor|datapath:data_path|mux8:MUX_3|output[8]     ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 30 LEs               ; 12 LEs                 ; No         ; |microprocessor|uP:control_path|nQ                          ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |microprocessor|datapath:data_path|priority_encoder:PE|o[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for datapath:data_path|memory:RAM|altsyncram:altsyncram_component|altsyncram_n9p3:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|general_register:T1 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|general_register:T2 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|general_register:T3 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|general_register:T4 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|general_register:T5 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 9     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|mux4:MUX_1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|mux4:MUX_2 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|mux8:MUX_3 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|mux4:MUX_4 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|mux4:MUX_5 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|mux2:MUX_6 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 9     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|mux2:MUX_7 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|mux2:MUX_8 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; n              ; 3     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|sign_extender:SE9 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 9     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|sign_extender:SE6 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 6     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|general_register:Ins_reg ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|general_register:PC ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|general_register:MDR ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:data_path|memory:RAM|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                           ;
++------------------------------------+----------------------+------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                        ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                        ;
+; WIDTH_A                            ; 16                   ; Signed Integer                                 ;
+; WIDTHAD_A                          ; 7                    ; Signed Integer                                 ;
+; NUMWORDS_A                         ; 128                  ; Signed Integer                                 ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                        ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                 ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                                 ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                        ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_n9p3      ; Untyped                                        ;
++------------------------------------+----------------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                          ;
++-------------------------------------------+---------------------------------------------------------------+
+; Name                                      ; Value                                                         ;
++-------------------------------------------+---------------------------------------------------------------+
+; Number of entity instances                ; 1                                                             ;
+; Entity Instance                           ; datapath:data_path|memory:RAM|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                   ;
+;     -- WIDTH_A                            ; 16                                                            ;
+;     -- NUMWORDS_A                         ; 128                                                           ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                        ;
+;     -- WIDTH_B                            ; 1                                                             ;
+;     -- NUMWORDS_B                         ; 0                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                     ;
++-------------------------------------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:data_path|mux4:MUX_5" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; inp4 ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:data_path|mux4:MUX_4" ;
++-------------+-------+----------+--------------------------+
+; Port        ; Type  ; Severity ; Details                  ;
++-------------+-------+----------+--------------------------+
+; inp1[15..1] ; Input ; Info     ; Stuck at GND             ;
+; inp1[0]     ; Input ; Info     ; Stuck at VCC             ;
+; inp4        ; Input ; Info     ; Stuck at GND             ;
++-------------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:data_path|mux8:MUX_3" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; inp6 ; Input ; Info     ; Stuck at GND                    ;
+; inp7 ; Input ; Info     ; Stuck at GND                    ;
+; inp8 ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:data_path|mux4:MUX_2"                                                               ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; inp4          ; Input  ; Info     ; Stuck at GND                                                                        ;
+; output[15..7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:data_path|mux4:MUX_1" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; inp4 ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 2                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Can't read Quartus Prime message file /home/aman/Documents/sem5/EE 309.
+Make sure the file exists and is up to date, and you have permission to read and write the file.
+Can't read Quartus Prime message file Processors/project1/iitbrisc/db/microprocessor.map.qmsg.
+Make sure the file exists and is up to date, and you have permission to read and write the file.
+
+

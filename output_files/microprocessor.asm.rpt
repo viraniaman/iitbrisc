@@ -1,0 +1,84 @@
+Assembler report for microprocessor
+Mon Oct 31 15:52:17 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: microprocessor.sof
+  6. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Mon Oct 31 15:52:17 2016 ;
+; Revision Name         ; microprocessor                        ;
+; Top-level Entity Name ; microprocessor                        ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE22F17C6                          ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
+
+
++---------------------------+
+; Assembler Generated Files ;
++---------------------------+
+; File Name                 ;
++---------------------------+
+; microprocessor.sof        ;
++---------------------------+
+
+
++----------------------------------------------+
+; Assembler Device Options: microprocessor.sof ;
++----------------+-----------------------------+
+; Option         ; Setting                     ;
++----------------+-----------------------------+
+; Device         ; EP4CE22F17C6                ;
+; JTAG usercode  ; 0x0013457F                  ;
+; Checksum       ; 0x0013457F                  ;
++----------------+-----------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Can't read Quartus Prime message file /home/aman/Documents/sem5/EE 309.
+Make sure the file exists and is up to date, and you have permission to read and write the file.
+Can't read Quartus Prime message file Processors/project1/iitbrisc/db/microprocessor.asm.qmsg.
+Make sure the file exists and is up to date, and you have permission to read and write the file.
+
+
