@@ -1,58 +1,41 @@
 vendor_name = ModelSim
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/types.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/datapath.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/mux4.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/sign_extender.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/mux8.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/priority_encoder.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/memory_testbench.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/microprocessor.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/register16_testbench.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/register_file_testbench.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/general_register.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/alu_testbench.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/mux2.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/alu.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/register_file.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/memory.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/sign_extender_testbench.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/priority_encoder_testbench.vhd
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/uP.vhd
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/vhdl/ieee/timing_b.vhd
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.inc
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/lpm_decode.inc
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/a_rdenreg.inc
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/altrom.inc
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/altram.inc
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/altdpram.inc
-source_file = 1, /home/aman/altera_lite/16.0/quartus/libraries/megafunctions/cbx.lst
-source_file = 1, /home/aman/Documents/sem5/EE 309
-Processors/project1/iitbrisc/db/altsyncram_n9p3.tdf
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/microprocessor_testbench.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/types.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/datapath.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/mux4.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/sign_extender.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/mux8.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/priority_encoder.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/memory_testbench.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/microprocessor.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/register16_testbench.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/register_file_testbench.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/general_register.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/alu_testbench.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/mux2.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/alu.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/register_file.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/sign_extender_testbench.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/priority_encoder_testbench.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/uP.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/memory.qip
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/memory.vhd
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/microprocessor.mif
+source_file = 1, c:/altera/16.0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/16.0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/16.0/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/16.0/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/altsyncram.tdf
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/lpm_mux.inc
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/lpm_decode.inc
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/aglobal160.inc
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/a_rdenreg.inc
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/altrom.inc
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/altram.inc
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/altdpram.inc
+source_file = 1, c:/altera/16.0/quartus/libraries/megafunctions/cbx.lst
+source_file = 1, C:/Users/pratonian/Desktop/iitbrisc/db/altsyncram_f7s3.tdf
 design_name = microprocessor
 instance = comp, \reset~input\, reset~input, microprocessor, 1
 instance = comp, \clk~input\, clk~input, microprocessor, 1

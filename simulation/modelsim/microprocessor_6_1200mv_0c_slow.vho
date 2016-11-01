@@ -15,9 +15,9 @@
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus Prime"
--- VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition"
+-- VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition"
 
--- DATE "10/31/2016 15:52:21"
+-- DATE "11/01/2016 14:54:22"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256

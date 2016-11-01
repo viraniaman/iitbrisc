@@ -1,0 +1,564 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/pratonian/Desktop/iitbrisc/simulation/modelsim
+Ealu
+Z1 w1477975651
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/pratonian/Desktop/iitbrisc/alu.vhd
+Z6 FC:/Users/pratonian/Desktop/iitbrisc/alu.vhd
+l0
+L5
+VWjY_NZ0A2nJnC^S:Nh:`]0
+!s100 l0:z7:^;Jo92o64jiL4YZ1
+Z7 OV;C;10.4d;61
+31
+Z8 !s110 1477992283
+!i10b 1
+Z9 !s108 1477992282.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/alu.vhd|
+Z11 !s107 C:/Users/pratonian/Desktop/iitbrisc/alu.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1
+Abasic
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 WjY_NZ0A2nJnC^S:Nh:`]0
+l19
+L14
+VAT<?cVz115Bdf`02;SID<3
+!s100 G>UBVBfo[;Y_h29MNdhFO3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edatapath
+Z14 w1477989870
+R2
+R3
+R4
+R0
+Z15 8C:/Users/pratonian/Desktop/iitbrisc/datapath.vhd
+Z16 FC:/Users/pratonian/Desktop/iitbrisc/datapath.vhd
+l0
+L6
+V@I:kc3ZK;8_OB6AXLZIdM2
+!s100 _4gnL?HoehiMLZVm1ib9E3
+R7
+31
+Z17 !s110 1477992282
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/datapath.vhd|
+Z19 !s107 C:/Users/pratonian/Desktop/iitbrisc/datapath.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 8 datapath 0 22 @I:kc3ZK;8_OB6AXLZIdM2
+l142
+L22
+V8Rh<Bo??TEI1@8OUYW2Ve0
+!s100 Z?HdQY9:XioA^oLUz5[9S3
+R7
+31
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Egeneral_register
+R1
+R3
+R4
+R0
+Z20 8C:/Users/pratonian/Desktop/iitbrisc/general_register.vhd
+Z21 FC:/Users/pratonian/Desktop/iitbrisc/general_register.vhd
+l0
+L5
+VOR;Gd7D:kZWV6Oo1;a=4?2
+!s100 MlF8RceO6;jV<n3Fml[E52
+R7
+31
+R17
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/general_register.vhd|
+Z23 !s107 C:/Users/pratonian/Desktop/iitbrisc/general_register.vhd|
+!i113 1
+R12
+R13
+Abasic
+R3
+R4
+DEx4 work 16 general_register 0 22 OR;Gd7D:kZWV6Oo1;a=4?2
+l20
+L18
+VHMYnAfYalPjXb0c`;cLV@0
+!s100 ff7O>Il0dJR6?1dYSPLdB1
+R7
+31
+R17
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Ememory
+Z24 w1477990314
+Z25 DPx9 altera_mf 20 altera_mf_components 0 22 JIZVPUohD7dNa?8:C5^LG2
+R3
+R4
+R0
+Z26 8C:/Users/pratonian/Desktop/iitbrisc/memory.vhd
+Z27 FC:/Users/pratonian/Desktop/iitbrisc/memory.vhd
+l0
+L43
+VfJ_?=KFPTQ@In1DmbF76`0
+!s100 EOjDUkd2N^2nG7D8_CkU:1
+R7
+31
+R8
+!i10b 1
+Z28 !s108 1477992283.000000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/memory.vhd|
+Z30 !s107 C:/Users/pratonian/Desktop/iitbrisc/memory.vhd|
+!i113 1
+R12
+R13
+Asyn
+R25
+R3
+R4
+DEx4 work 6 memory 0 22 fJ_?=KFPTQ@In1DmbF76`0
+l59
+L55
+V@8SCJHKWScKFY^]f5XC7^3
+!s100 V9IPaTQ`@l3UWM7_F1L>53
+R7
+31
+R8
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Emicroprocessor
+Z31 w1477992216
+Z32 DPx4 work 5 types 0 22 UF@[63=@HX]3LR=lUf55P1
+R2
+R3
+R4
+R0
+Z33 8C:/Users/pratonian/Desktop/iitbrisc/microprocessor.vhd
+Z34 FC:/Users/pratonian/Desktop/iitbrisc/microprocessor.vhd
+l0
+L6
+V`]z2d5JnRd_?:k2CH;^>o0
+!s100 ^Lfl@k8gRlOgP01H7^cm;2
+R7
+31
+R8
+!i10b 1
+R28
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/microprocessor.vhd|
+Z36 !s107 C:/Users/pratonian/Desktop/iitbrisc/microprocessor.vhd|
+!i113 1
+R12
+R13
+Abasic
+R32
+R2
+R3
+R4
+DEx4 work 14 microprocessor 0 22 `]z2d5JnRd_?:k2CH;^>o0
+l59
+L12
+V_^jhGX7A7Jmdj<98JDl=H3
+!s100 2?;YGHOh88V[SG@ccMz_E0
+R7
+31
+R8
+!i10b 1
+R28
+R35
+R36
+!i113 1
+R12
+R13
+Emicroprocessor_testbench
+Z37 w1477982740
+R2
+R3
+R4
+R0
+Z38 8C:/Users/pratonian/Desktop/iitbrisc/microprocessor_testbench.vhd
+Z39 FC:/Users/pratonian/Desktop/iitbrisc/microprocessor_testbench.vhd
+l0
+L8
+VX=La8eQ@8nCicOiS65ajV3
+!s100 F[zB?3LeMFdQ0[A2]:@AK0
+R7
+31
+R8
+!i10b 1
+R28
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/microprocessor_testbench.vhd|
+Z41 !s107 C:/Users/pratonian/Desktop/iitbrisc/microprocessor_testbench.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 24 microprocessor_testbench 0 22 X=La8eQ@8nCicOiS65ajV3
+l20
+L11
+V6dVnD]c[^4lO^0lZ`A^n:2
+!s100 f_az@cW7LR`lFDGf`hzgD2
+R7
+31
+R8
+!i10b 1
+R28
+R40
+R41
+!i113 1
+R12
+R13
+Emux2
+R1
+R2
+R3
+R4
+R0
+Z42 8C:/Users/pratonian/Desktop/iitbrisc/mux2.vhd
+Z43 FC:/Users/pratonian/Desktop/iitbrisc/mux2.vhd
+l0
+L6
+VC^[<D:MV]W7]72NZ2HdUb0
+!s100 [QY;QHzWMJ:ARL1mbHdY;0
+R7
+31
+R17
+!i10b 1
+R9
+Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/mux2.vhd|
+Z45 !s107 C:/Users/pratonian/Desktop/iitbrisc/mux2.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 4 mux2 0 22 C^[<D:MV]W7]72NZ2HdUb0
+l22
+L20
+Vfi;0FQX4X;z96Zj7G_4Xg1
+!s100 820aU0;kn_HXdKWU7JGa`0
+R7
+31
+R17
+!i10b 1
+R9
+R44
+R45
+!i113 1
+R12
+R13
+Emux4
+R1
+R2
+R3
+R4
+R0
+Z46 8C:/Users/pratonian/Desktop/iitbrisc/mux4.vhd
+Z47 FC:/Users/pratonian/Desktop/iitbrisc/mux4.vhd
+l0
+L6
+VG<O^jA5Nmi@ajO]SPZ5ze0
+!s100 7go:5P3Ko>F;1c;GilCIB0
+R7
+31
+R17
+!i10b 1
+R9
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/mux4.vhd|
+Z49 !s107 C:/Users/pratonian/Desktop/iitbrisc/mux4.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 4 mux4 0 22 G<O^jA5Nmi@ajO]SPZ5ze0
+l22
+L20
+Vc[;VaaaF50JW1eh1ejh5M1
+!s100 TU5QYmFXTjL]S^7N0>[Zh0
+R7
+31
+R17
+!i10b 1
+R9
+R48
+R49
+!i113 1
+R12
+R13
+Emux8
+R1
+R2
+R3
+R4
+R0
+Z50 8C:/Users/pratonian/Desktop/iitbrisc/mux8.vhd
+Z51 FC:/Users/pratonian/Desktop/iitbrisc/mux8.vhd
+l0
+L6
+V_V9Oz3;cEUUY2XbIW=Agz0
+!s100 77IDiO?Md5CQdTlPz2LKC0
+R7
+31
+R17
+!i10b 1
+R9
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/mux8.vhd|
+Z53 !s107 C:/Users/pratonian/Desktop/iitbrisc/mux8.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 4 mux8 0 22 _V9Oz3;cEUUY2XbIW=Agz0
+l22
+L20
+V2fX[_^El:gcfY`1;4fV9W0
+!s100 EYEgY7TX3D>DM:ofceA883
+R7
+31
+R17
+!i10b 1
+R9
+R52
+R53
+!i113 1
+R12
+R13
+Epriority_encoder
+R1
+R2
+R3
+R4
+R0
+Z54 8C:/Users/pratonian/Desktop/iitbrisc/priority_encoder.vhd
+Z55 FC:/Users/pratonian/Desktop/iitbrisc/priority_encoder.vhd
+l0
+L6
+Vinm7hKThmE7g?e^JUR[>A3
+!s100 foa5:T`k[E:7V;;VPa9M40
+R7
+31
+R17
+!i10b 1
+R9
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/priority_encoder.vhd|
+Z57 !s107 C:/Users/pratonian/Desktop/iitbrisc/priority_encoder.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 16 priority_encoder 0 22 inm7hKThmE7g?e^JUR[>A3
+l17
+L15
+VKAYW^K[T]z[G7P`S^nL=70
+!s100 oU`J6@:g<kXV_LIQX;?XI0
+R7
+31
+R17
+!i10b 1
+R9
+R56
+R57
+!i113 1
+R12
+R13
+Eregister_file
+R1
+R2
+R3
+R4
+R0
+Z58 8C:/Users/pratonian/Desktop/iitbrisc/register_file.vhd
+Z59 FC:/Users/pratonian/Desktop/iitbrisc/register_file.vhd
+l0
+L6
+V2iOjb5YGJWf;<m2^_6S050
+!s100 zLOzhhK=^F=Q96bbLTQhJ0
+R7
+31
+R8
+!i10b 1
+R28
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/register_file.vhd|
+Z61 !s107 C:/Users/pratonian/Desktop/iitbrisc/register_file.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 13 register_file 0 22 2iOjb5YGJWf;<m2^_6S050
+l25
+L19
+V3k[1lCiK>o7CK19^7MW0U0
+!s100 JOJ08_[H>AAX`Sz>22DXQ1
+R7
+31
+R8
+!i10b 1
+R28
+R60
+R61
+!i113 1
+R12
+R13
+Esign_extender
+R1
+R2
+R3
+R4
+R0
+Z62 8C:/Users/pratonian/Desktop/iitbrisc/sign_extender.vhd
+Z63 FC:/Users/pratonian/Desktop/iitbrisc/sign_extender.vhd
+l0
+L5
+V?5mb?8MKBJNf]K>EY@Yf22
+!s100 76BE[1DYEofE<ddl]>LSX0
+R7
+31
+R17
+!i10b 1
+R9
+Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/sign_extender.vhd|
+Z65 !s107 C:/Users/pratonian/Desktop/iitbrisc/sign_extender.vhd|
+!i113 1
+R12
+R13
+Abasic
+R2
+R3
+R4
+DEx4 work 13 sign_extender 0 22 ?5mb?8MKBJNf]K>EY@Yf22
+l16
+L14
+Vg1K_8Nc^1@ciWQ8G2NHB>1
+!s100 nmM96Xe`bHdLb<hD2?Z:E0
+R7
+31
+R17
+!i10b 1
+R9
+R64
+R65
+!i113 1
+R12
+R13
+Ptypes
+R1
+R0
+8C:/Users/pratonian/Desktop/iitbrisc/types.vhd
+FC:/Users/pratonian/Desktop/iitbrisc/types.vhd
+l0
+L1
+VUF@[63=@HX]3LR=lUf55P1
+!s100 anRz94eg6?]GAboh5=ToI2
+R7
+31
+R17
+!i10b 1
+R9
+!s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/types.vhd|
+!s107 C:/Users/pratonian/Desktop/iitbrisc/types.vhd|
+!i113 1
+R12
+R13
+Eup
+Z66 w1477991467
+R32
+R2
+R3
+R4
+R0
+Z67 8C:/Users/pratonian/Desktop/iitbrisc/uP.vhd
+Z68 FC:/Users/pratonian/Desktop/iitbrisc/uP.vhd
+l0
+L6
+VAII]1AWNb`j19HENmIjm72
+!s100 7UMTD8Y:Dc3D73;=H4i572
+R7
+31
+R8
+!i10b 1
+R28
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/pratonian/Desktop/iitbrisc/uP.vhd|
+Z70 !s107 C:/Users/pratonian/Desktop/iitbrisc/uP.vhd|
+!i113 1
+R12
+R13
+Abehave
+R32
+R2
+R3
+R4
+DEx4 work 2 up 0 22 AII]1AWNb`j19HENmIjm72
+l33
+L29
+V`T0nHzmaZ@TA42Cl>5i9_0
+!s100 C6;7T^GlUhR9Jz>cN[K?j2
+R7
+31
+R8
+!i10b 1
+R28
+R69
+R70
+!i113 1
+R12
+R13

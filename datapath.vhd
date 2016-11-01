@@ -6,7 +6,8 @@ use ieee.numeric_std.all;
 entity datapath is
 
 port(
-	PCWrite, IRWrite, RFWrite, MDRWrite, T1Write, T2Write, T3Write, T4Write, T5Write, MemWrite,
+	PCWrite,IRWrite: in std_logic:='1';
+	RFWrite, MDRWrite, T1Write, T2Write, T3Write, T4Write, T5Write, MemWrite,
 	Control_M6, Control_M7, Control_M8, clk: in std_logic;
 	Control_M3: in std_logic_vector(2 downto 0);
 	ALUop, control_M2, control_M4, control_M5, Control_M1: in std_logic_vector(1 downto 0);

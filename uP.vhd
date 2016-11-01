@@ -14,7 +14,8 @@ port(
 	Z,C : in std_logic;
 	PE_done : in std_logic;
 --	done:out std_logic;
-	MEM_write,RF_write,IR_write,PC_write,MDR_write:out std_logic;
+	PC_write,IR_write:out std_logic;--:='1';
+	MEM_write,RF_write,MDR_write:out std_logic:='0';
 	T1_write,T2_write,T3_write,T4_write,T5_write:out std_logic;
 	M1,M2,M4,M5: out std_logic_vector(1 downto 0);
 	M6,M7,M8: out std_logic;
@@ -35,7 +36,7 @@ process(clk, Q, reset, opcode, Z, IR, C, PE_done)
 
 	variable nQ: FsmState;
 	variable reset1: std_logic;
-	variable MEM_write1,IR_write1,PC_write1,MDR_write1,RF_write1:std_logic;
+	variable MEM_write1,IR_write1,PC_write1,MDR_write1,RF_write1:std_logic:='0';
 	variable T1_write1,T2_write1,T3_write1,T4_write1,T5_write1:std_logic;
 	variable M1a,M2a,M4a,M5a:std_logic_vector(1 downto 0); 
 	variable M6a,M7a,M8a: std_logic;
